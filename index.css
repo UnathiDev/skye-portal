@@ -1,0 +1,299 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+/* Default Navbar */
+nav {
+    background-color: #003b5c;
+    padding: 7px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide menu on small screens initially */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #0099cc;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom, #003b5c, #005f8f);
+    color: white;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+}
+.skye-logo {
+    width: 200px;        /* Adjust the width to make the logo bigger */
+    height: 200px;       /* Set the height to match the width for a perfect circle */
+    border-radius: 50%;  /* Makes the logo round */
+    object-fit: cover;   /* Ensures the logo image scales correctly and remains clear */
+    position: relative;
+}
+
+/* Overlay text on logo */
+.skye-logo:after {
+    content: "© Skye";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333333;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    opacity: 1; /* Ensure this is visible by default */
+}
+
+/* Button Container - Flexbox for aligning buttons */
+.btn-container {
+    display: flex;               /* Align buttons next to each other */
+    justify-content: center;     /* Center the buttons horizontally */
+    gap: 20px;                   /* Space between buttons */
+    margin-top: 20px;            /* Optional, adds some space from the top */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #006080;   /* Set button color */
+    color: white;                /* Text color */
+    padding: 10px 20px;          /* Add padding for size */
+    text-decoration: none;       /* Remove underline from links */
+    border-radius: 5px;          /* Round corners */
+    font-size: 16px;             /* Text size */
+    display: inline-block;       /* Allow buttons to sit side by side */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover State */
+.btn:hover {
+    background-color: #0099cc;   /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Focus State */
+.btn:focus {
+    outline: none;               /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 59, 92, 0.5); /* Focus ring with the same color */
+}
+
+/* Fade-in Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Articles Section - Centering */
+.articles-section {
+    display: flex;                     /* Use Flexbox */
+    justify-content: center;           /* Center horizontally */
+    align-items: center;               /* Center vertically */
+    flex-direction: column;            /* Stack items vertically */
+    height: 100vh;                     /* Full viewport height */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Individual Article Styling */
+.article-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 80%;               /* Set width of articles */
+    max-width: 600px;         /* Limit width for larger screens */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* For visibility of articles */
+.article-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style for the publication date */
+.publication-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .btn {
+    background-color: #0099cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+.pagination .btn:hover {
+    background-color: #006080;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #003b5c;
+    color: white;
+    margin-top: 50px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    height: 8px; /* Set the height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Light gray background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0099cc; /* Lighter blue color for the thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #006080; /* Darker blue on hover for the thumb */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #004d66; /* Even darker blue on active click */
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 80px 20px;
+    }
+    .article-item {
+        width: 90%;
+    }
+    
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #003b5c;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;     /* Center buttons vertically */
+    }
+}

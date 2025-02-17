@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye | Articles</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #003b5c, #005f8f);
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #003b5c;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #0099cc;
+        }
+
+        /* Under Construction Section */
+        .construction {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            min-height: 60vh;
+        }
+
+        .animation-container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .bounce {
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        /* Make elements visible after page load */
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .animation-container {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .construction {
+                padding: 30px 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://unathidev.github.io/Unathi-Okhue-Skye/index.html" target="_blank">Founder</a></li>
+            <li><a href="../articles/indexarticles.html">Articles</a></li>
+            <li><a href="../forum/indexforum.html">Forum</a></li>
+            <li><a href="../credits/creditslegal.html">Credits</a></li>
+        </ul>
+    </nav>
+
+    <section class="construction">
+        <div class="animation-container">
+            <h1 class="fade-in">🚧 This Page is Under Construction 🚧</h1>
+            <p class="slide-in">We're working on this page to bring you something great. Check back soon!</p>
+            <a href="../index.html" class="btn bounce">Return to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Skye | All Rights Reserved.</p>
+        <p class="credits">Concept, Design & Development by Unathi Okhue</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in, .slide-in, .bounce");
+            elements.forEach(element => element.classList.add("visible"));
+        });
+    </script>
+</body>
+</html>
